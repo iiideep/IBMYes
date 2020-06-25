@@ -38,7 +38,9 @@ clone_repo(){
 install(){
     echo "进行安装。。。"
     cd ${SH_PATH}/IBMYes/v2ray-cloudfoundry
-    cf push
+    ibmcloud target --cf
+    ibmcloud cf install
+    ibmcloud cf push
     echo "安装完成。"
 }
 
